@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mohana Swaroopa | Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#0f172a;
+}
+
+/* NAVBAR */
+nav{
+    background:#020617;
+    padding:15px;
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+nav button{
+    background:none;
+    border:none;
+    color:white;
+    font-size:16px;
+    padding:8px 18px;
+    border-radius:20px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+nav button:hover,
+nav button.active{
+    background:#fde047;
+    color:#000;
+}
+
+/* SECTIONS */
+section{
+    display:none;
+    max-width:1000px;
+    margin:60px auto;
+    padding:50px;
+    border-radius:25px;
+    color:#111;
+    animation:fade 0.8s ease;
+}
+
+section.active{
+    display:block;
+}
+
+/* DIFFERENT COLORS */
+#home{ background:linear-gradient(135deg,#818cf8,#4f46e5); }
+#about{ background:linear-gradient(135deg,#fbcfe8,#f472b6); }
+#skills{ background:linear-gradient(135deg,#bbf7d0,#22c55e); }
+#education{ background:linear-gradient(135deg,#fde68a,#f59e0b); }
+#contact{ background:linear-gradient(135deg,#bae6fd,#38bdf8); }
+
+@keyframes fade{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+/* HOME IMAGE */
+.home{
+    text-align:center;
+}
+
+.profile-img{
+    width:190px;
+    height:190px;
+    border-radius:50%;
+    border:6px solid white;
+    object-fit:cover;
+    box-shadow:0 20px 35px rgba(0,0,0,0.4);
+    animation:pop 1s ease;
+}
+
+@keyframes pop{
+    from{transform:scale(0);}
+    to{transform:scale(1);}
+}
+
+.tagline{
+    font-size:18px;
+    margin-top:10px;
+}
+
+/* SKILLS */
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    margin-top:30px;
+}
+
+.skill{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    font-weight:600;
+}
+
+/* CONTACT */
+.contact p{
+    margin:12px 0;
+    font-size:16px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <button class="active" onclick="showSection('home',this)">Home</button>
+    <button onclick="showSection('about',this)">About</button>
+    <button onclick="showSection('skills',this)">Skills</button>
+    <button onclick="showSection('education',this)">Education</button>
+    <button onclick="showSection('contact',this)">Contact</button>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="active home">
+    <img src="swaroop.jpeg" class="profile-img" alt="Mohana Swaroopa">
+    <h1>Mohana Swaroopa Mane</h1>
+    <p class="tagline">Computer Science Student | Web Developer | MERN Stack Intern</p><h4>Web Development</h4>
+    <p>I am a passionate Web Developer with a strong interest in creating clean, responsive, and user-friendly websites. 
+    <h4>Programming skills</h4>
+    <p>I enjoy turning ideas into real-world web applications using HTML, CSS, and basic JavaScript.</p>
+    <h4> Soft Skills</h4>
+    <p>I have strong communication and interpersonal skills, which help me work well with others and express ideas clearly. I am a quick learner, adaptable to new environments, and open to feedback for continuous improvement.
+</p>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h1>About Me</h1>
+    <p>My name is Mohana swaroopa Mane. I am currently pursuing B.Sc (Computers) at Aditya Degree College, Amalapuram. I am interested in web development and programming. I enjoy learning new technologies and creating simple projects to improve my skills
+I am a quick learner with good communication and teamwork skills. My goal is to start my career as a software professional and grow my knowledge in the IT field.</p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <h1>Skills</h1>
+    <div class="skills">
+        <div class="skill">C Programming</div>
+        <div class="skill">Python Essentials</div>
+        <div class="skill">Java Basics</div>
+        <div class="skill">HTML & CSS</div>
+        <div class="skill">MERN Stack</div>
+        <div class="skill">Generative AI</div>
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+<h2 class="edu-title">My Education</h2>
+
+    <div class="edu-container">
+        <div class="edu-item">
+            <h4>Bachelor of Science in Computer Science</h4>
+            <p>Aditya Degree College, Amalapuram                              2023 - 2026</p>
+            <span>CGPA: 88%/100</span>
+        </div>
+
+        <div class="edu-item">
+            <h4>Intermediate</h4>
+            <p>Balu best Junior College, Amalapuram                           2021 - 2023 </p>
+            <span>Percentage: 74%/100</span>
+        </div>
+        <div class="edu-item">
+            <h4>Schooling</h4>
+            <p>Oxford Concept School,Kothapeta                                2020 - 2021</p>
+            <span>Percentage: 95%/100</span>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+    <h1>Contact</h1>
+    <p>📞 +91 8555975282</p>
+    <p>📧 mohanaswaroopamane777@gmail.com</p>
+    <p>📍 Kothapeta, Andhra Pradesh</p>
+     <p><span>LinkedIn:</span>
+                <a href="https://www.linkedin.com/in/mohanaswaroopa-mane-6a42863a4" target="_blank">
+                    linkedin.com/in/mohanaswaroopa-mane-6a42863a4
+                </a>
+            </p>
+
+            <p><span>GitHub:</span>
+                <a href=https://github.com/mohanaswaroopa21 target="_blank">
+                    github.com/mohanaswaroopa21
+                </a>
+            </p>
+</section>
+
+<script>
+function showSection(id,btn){
+    document.querySelectorAll("section").forEach(sec=>{
+        sec.classList.remove("active");
+    });
+    document.getElementById(id).classList.add("active");
+
+    document.querySelectorAll("nav button").forEach(b=>{
+        b.classList.remove("active");
+    });
+    btn.classList.add("active");
+}
+</script>
+
+</body>
+</html>
